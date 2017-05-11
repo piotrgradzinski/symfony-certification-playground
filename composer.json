@@ -1,0 +1,15 @@
+{
+    "name": "pgg/sf-playground",
+    "description": "Playground for Symfony3 certification",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Piotr Grabski-Gradzinski",
+            "email": "piotr.gradzinski@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/config": "^3.2",
+        "symfony/yaml": "^3.2"
+    }
+}
