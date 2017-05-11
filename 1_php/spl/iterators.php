@@ -90,7 +90,7 @@ echoith();
  */
 $directoryIterator = new DirectoryIterator('.');
 foreach ($directoryIterator as $k => $v) {
-    echoit("$k => $v | " . ((int)$v->isDot())); // $v jest klasy DirectoryIterator, który rozszerza SplFileInfo
+    echoit("$k => $v | " . ((int)$v->isDot())); // $v is the instance of DirectoryIterator, which extends SplFileInfo
 }
 
 // ------------------------------------------------------------------------
@@ -112,7 +112,7 @@ echoith();
  */
 $filesystemIterator = new FilesystemIterator('.');
 foreach ($filesystemIterator as $k => $v) {
-    echoit("$k => $v" ); // $v jest klasy SplFileInfo
+    echoit("$k => $v" ); // $v is the instance of SplFileInfo
 }
 
 // ------------------------------------------------------------------------
@@ -121,9 +121,9 @@ echoith();
 /**
  * GLOB ITERATOR
  */
-$globIterator = new GlobIterator('*.php'); // to jak i glob() nie działa samo z siebie rekursywnie
+$globIterator = new GlobIterator('*.php'); // this one as well as glob() is not working recursively on its own
 foreach ($globIterator as $k => $v) {
-    echoit("$k => $v" ); // $v jest klasy SplFileInfo
+    echoit("$k => $v" ); // $v is the instance of SplFileInfo
 }
 
 // ------------------------------------------------------------------------
@@ -177,7 +177,7 @@ $recursiveArrayIterator = new RecursiveArrayIterator(array(
     ),
 ));
 
-// to nie daje dobrych efektów, właściwie trzeba dopisać dodatkową funkcję do trawersowania iteratora
+// here you should write some traversing function since this approach is not giving good results
 // http://php.net/manual/en/class.recursivearrayiterator.php
 foreach ($recursiveArrayIterator as $k => $v) {
     var_dump($v);
@@ -194,7 +194,7 @@ $tab2 = array(1, 'asd', 2, 'das', 3,4,5,6,7,8,9,10,123);
 
 $regexIterator = new RegexIterator(new ArrayIterator($tab2), '/\D+/');
 foreach ($regexIterator as $k => $v) {
-    echoit("$k => $v" ); // $v jest klasy SplFileInfo
+    echoit("$k => $v" ); // $v is the instance of SplFileInfo
 }
 
 

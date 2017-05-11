@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Just some ordinary setup for easier var_dump()
+ */
+
 echo "<pre>";
 
 function hr(){

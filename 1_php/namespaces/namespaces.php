@@ -5,7 +5,10 @@
 // include "../common.php"; - to tez
 // define('bar', 123); - to tez
 
-//declare(encoding='UTF-8'); // jest OK, mogą być tez ticks - można odpalić jakąś funkcję co ileś ticków (czyli wykonanych statementów)
+/**
+ * You can use declare or ticks (http://php.net/manual/en/control-structures.declare.php#control-structures.declare.ticks)
+ * which is useful do execute some function every X ticks - executed statements.
+ */
 
 namespace foo {
     include "common_namespace.php";
@@ -45,13 +48,13 @@ namespace foo {
 
     // ------------------------------------------------------------------------
 
-    // w globalnym __NAMESPACE__ jest puste
+    // in global scope __NAMESPACE__ IS EMPTY
     \foo\bar\echoit( __NAMESPACE__ );
 
     // ------------------------------------------------------------------------
 
-    // słowo kluczowe namespace wskazuje na aktualny namespace
-    // w globalnym namespace wskazuje na globalny, tak po prostu
+    // keyword namespace points to the current namespace,
+    // in global scope points to global scope :)
 
     $c = new namespace\A();
 
